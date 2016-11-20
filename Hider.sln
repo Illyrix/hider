@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hider", "Hider.vcxproj", "{BBCF2F87-13EF-4FAA-9239-6F8D51505240}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BBCF2F87-13EF-4FAA-9239-6F8D51505240}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BBCF2F87-13EF-4FAA-9239-6F8D51505240}.Debug|Win32.Build.0 = Debug|Win32
+		{BBCF2F87-13EF-4FAA-9239-6F8D51505240}.Release|Win32.ActiveCfg = Release|Win32
+		{BBCF2F87-13EF-4FAA-9239-6F8D51505240}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
