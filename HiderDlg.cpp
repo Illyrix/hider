@@ -13,9 +13,9 @@
 NOTIFYICONDATA m_nid;
 static CWnd *cMain[50];
 static int deep=0;
-static hotkey hideHotKey[3];
-static hotkey showHotKey[3];
-static hotkey exitHotKey[3];
+static Hotkey hideHotKey[3];
+static Hotkey showHotKey[3];
+static Hotkey exitHotKey[3];
 // CHiderDlg 对话框
 void setHotKey(){
 	hideHotKey[0].setBykey(GetPrivateProfileInt(L"hide", L"1", 0x0001, L".\\config.ini"));
@@ -108,7 +108,6 @@ BOOL CHiderDlg::OnInitDialog()
 	wcscpy_s(m_nid.szTip, L"Hider");                // VS2008 UNICODE编码用wcscpy_s()函数
 	Shell_NotifyIcon(NIM_ADD, &m_nid);                // 在托盘区添加图标
 	// TODO:  在此添加额外的初始化代码
-	//MessageBox(_T("隐藏当前窗口:Alt+Z\n还原上一个隐藏窗口:Alt+X\n本程序将后台隐藏，使用Alt+H关闭此程序\n关闭程序时所有隐藏窗口将会还原"),MB_OK);
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -149,19 +148,7 @@ HCURSOR CHiderDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
-/*
-void CHiderDlg::OnBnClickedButton1()
-{
-	// TODO:  在此添加控件通知处理程序代码
-	CString in_str;
-	if (::GetAsyncKeyState(VK_CONTROL))
-		in_str += _T("Ctr ");
-	if (::GetAsyncKeyState(VK_MENU))
-		in_str += _T("Alt ");
-	if (::GetAsyncKeyState(VK_MENU))
-		in_str += _T("Alt ");
-	//GetDlgItem(IDC_STATIC2)->SetWindowText(in_str);
-}*/
+
 LRESULT CHiderDlg::OnHotKey(WPARAM wParam, LPARAM lParam)
 {
 	HWND dwndviem = NULL;
